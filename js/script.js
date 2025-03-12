@@ -113,12 +113,11 @@ if (contactForm) {
 
 // Typing effect for hero section
 const typingElement = document.querySelector('.hero-text h2');
-const originalText = typingElement ? typingElement.textContent : '';
+const originalText = typingElement ? typingElement.textContent.trim() : '';
 
 function setupTypingEffect() {
-    if (!typingElement) return;
-    
-    typingElement.textContent = '';
+    if (!typingElement || !originalText) return;
+
     let i = 0;
     
     function typeWriter() {
@@ -126,14 +125,24 @@ function setupTypingEffect() {
             typingElement.textContent += originalText.charAt(i);
             i++;
             setTimeout(typeWriter, 100);
+        } else {
+            // Wait before restarting
+            setTimeout(() => {
+                typingElement.textContent = ''; // Reset text
+                i = 0; // Reset index
+                typeWriter(); // Restart effect
+            }, 1500);
         }
     }
-    
+
+    // Start typing effect
+    typingElement.textContent = ''; // Ensure it's cleared before starting
     typeWriter();
 }
 
-// Run typing effect when page loads
-window.addEventListener('load', setupTypingEffect);
+// Call function only once when page loads
+document.addEventListener("DOMContentLoaded", setupTypingEffect);
+
 
 // Scroll reveal animation
 function revealOnScroll() {
