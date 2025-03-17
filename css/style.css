@@ -680,22 +680,29 @@ footer {
     background-color: var(--dark-color);
     color: white;
     padding: 30px 0;
+    width: 100%;
+    position: relative;
+    bottom: 0;
 }
 
 .footer-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .footer-links {
     display: flex;
     gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 10px;
 }
 
 .footer-links a {
     color: white;
     transition: var(--transition);
+    padding: 5px;
 }
 
 .footer-links a:hover {
@@ -797,6 +804,13 @@ footer {
         flex-direction: column;
         gap: 20px;
         text-align: center;
+        padding: 0 15px;
+    }
+    
+    .footer-links {
+        justify-content: center;
+        gap: 15px;
+        margin-bottom: 10px;
     }
 
     .resume-item-meta {
@@ -817,5 +831,18 @@ footer {
 
     .projects-grid {
         grid-template-columns: 1fr;
+    }
+
+    .footer-links {
+        gap: 10px;
+    }
+    
+    .footer-links a {
+        padding: 8px;
+        font-size: 14px;
+    }
+    
+    footer {
+        padding-bottom: 40px;
     }
 } 
