@@ -299,8 +299,10 @@
         const frameSizer = new ResizeObserver(fitFrame);
         frameSizer.observe(frame.parentElement);
 
+        const urlEl = document.querySelector('[data-preview-url]');
         const setActive = (i) => {
             if (i === active) return;
+            if (urlEl) urlEl.textContent = items[i].dataset.url || '';
             const prev = imgs[active];
             items[active].classList.remove('is-active');
             items[i].classList.add('is-active');
@@ -715,8 +717,8 @@
         });
 
         /* open and close */
-        let opener = null, heroVisible = true, closeTimer = 0;
-        const updateFab = () => { if (fab) fab.hidden = heroVisible || !panel.hidden; };
+        let opener = null, heroVisible = true, footerVisible = false, closeTimer = 0;
+        const updateFab = () => { if (fab) fab.hidden = heroVisible || footerVisible || !panel.hidden; };
         const isOpen = () => !panel.hidden;
         const open = ({ listen = false } = {}) => {
             clearTimeout(closeTimer);
@@ -753,6 +755,11 @@
         const hero = document.querySelector('.hero');
         if (hero && fab) {
             new IntersectionObserver(([entry]) => { heroVisible = entry.isIntersecting; updateFab(); }, { rootMargin: '-120px 0px 0px 0px' }).observe(hero);
+        }
+        // the footer has its own contact links, and the button would cover "Back to top"
+        const footer = document.querySelector('.site-footer');
+        if (footer && fab) {
+            new IntersectionObserver(([entry]) => { footerVisible = entry.isIntersecting; updateFab(); }).observe(footer);
         }
     })();
 
