@@ -3,49 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thank You | Hiten Patel</title>
+    <title>Message sent | Hiten Patel</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%232638F0'/%3E%3Cg fill='%23fff'%3E%3Crect x='6' y='13' width='3' height='6' rx='1.5'/%3E%3Crect x='11' y='8' width='3' height='16' rx='1.5'/%3E%3Crect x='16' y='11' width='3' height='10' rx='1.5'/%3E%3Crect x='21' y='6' width='3' height='20' rx='1.5'/%3E%3C/g%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:wght@400;600;700&family=Familjen+Grotesk:wght@400..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        try { var t = localStorage.getItem('theme'); if (t) document.documentElement.setAttribute('data-theme', t); } catch (e) {}
+    </script>
     <style>
-        .thank-you-container {
+        .sent {
             min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 2rem;
+            display: grid;
+            align-content: center;
+            gap: 1.25rem;
+            padding-block: 4rem;
         }
-        
-        .thank-you-icon {
-            font-size: 5rem;
-            color: var(--primary-color);
-            margin-bottom: 2rem;
-        }
-        
-        .thank-you-title {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            color: var(--dark-color);
-        }
-        
-        .thank-you-message {
-            font-size: 1.2rem;
-            max-width: 600px;
-            margin-bottom: 2rem;
-            color: var(--gray-color);
-        }
+        .sent-glyph { width: 56px; height: 56px; fill: var(--ultra); }
+        .sent h1 { font-size: var(--step-3); max-width: 16ch; }
+        .sent p { max-width: 52ch; color: var(--slate); font-size: var(--step-1); }
+        .sent .btn { justify-self: start; margin-top: 0.5rem; }
     </style>
 </head>
 <body>
-    <div class="thank-you-container">
-        <div class="thank-you-icon">
-            <i class="fas fa-check-circle"></i>
-        </div>
-        <h1 class="thank-you-title">Thank You!</h1>
-        <p class="thank-you-message">Your message has been sent successfully. I'll get back to you as soon as possible.</p>
-        <a href="index.html" class="btn primary-btn">Back to Homepage</a>
-    </div>
+    <main class="wrap sent">
+        <svg class="sent-glyph" viewBox="0 0 20 20" aria-hidden="true"><rect x="1" y="8" width="3" height="4" rx="1.5"/><rect x="6" y="4" width="3" height="12" rx="1.5"/><rect x="11" y="6" width="3" height="8" rx="1.5"/><rect x="16" y="2" width="3" height="16" rx="1.5"/></svg>
+        <h1>Message sent. Thanks for reaching out.</h1>
+        <p>I'll reply to the email address you gave. If it's urgent, you can also write to hp040912@gmail.com directly.</p>
+        <a href="index.html" class="btn btn-primary">Back to the portfolio</a>
+    </main>
 </body>
-</html> 
+</html>

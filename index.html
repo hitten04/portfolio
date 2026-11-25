@@ -3,462 +3,311 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hiten Patel | Software Developer</title>
+    <title>Hiten Patel | Python and AI Developer</title>
+    <meta name="description" content="Hiten Patel is a Python and AI developer in Ahmedabad building voice and chat agents, FastAPI backends and machine learning tools.">
+    <meta property="og:title" content="Hiten Patel | Python and AI Developer">
+    <meta property="og:description" content="Custom software, AI agents and AI integrations, built by Hiten Patel.">
+    <meta property="og:image" content="images/web/hiten-portrait.webp">
+    <meta name="theme-color" content="#ECEEE7" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#15171B" media="(prefers-color-scheme: dark)">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%232638F0'/%3E%3Cg fill='%23fff'%3E%3Crect x='6' y='13' width='3' height='6' rx='1.5'/%3E%3Crect x='11' y='8' width='3' height='16' rx='1.5'/%3E%3Crect x='16' y='11' width='3' height='10' rx='1.5'/%3E%3Crect x='21' y='6' width='3' height='20' rx='1.5'/%3E%3C/g%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;1,400&family=Familjen+Grotesk:wght@400..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        try { var t = localStorage.getItem('theme'); if (t) document.documentElement.setAttribute('data-theme', t); } catch (e) {}
+    </script>
 </head>
 <body>
-    <!-- Header Section -->
-    <header>
-        <div class="container">
-            <nav>
-                <div class="logo">Hiten<span>Patel</span></div>
-                <ul class="nav-links">
-                    <li><a href="#home" class="active">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#resume">Resume</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-                <div class="hamburger">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </div>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header" id="top">
+        <div class="wrap header-inner">
+            <a href="#top" class="wordmark" aria-label="Hiten Patel, back to top">
+                Hiten Patel
+            </a>
+
+            <nav class="site-nav" id="site-nav" aria-label="Main">
+                <a href="#work">Work</a>
+                <a href="#experience">Experience</a>
+                <a href="#skills">Skills</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+                <a href="images/hitenCV.pdf" class="nav-resume" target="_blank" rel="noopener">Resume (PDF)</a>
             </nav>
+
+            <div class="header-actions">
+                <button class="icon-btn theme-toggle" type="button" aria-label="Switch colour theme">
+                    <svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 1.5v3M12 19.5v3M4.6 4.6l2.1 2.1M17.3 17.3l2.1 2.1M1.5 12h3M19.5 12h3M4.6 19.4l2.1-2.1M17.3 6.7l2.1-2.1"/></svg>
+                    <svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.2A8.5 8.5 0 0 1 9.8 3.5a8.5 8.5 0 1 0 10.7 10.7z"/></svg>
+                </button>
+                <a class="btn btn-small" href="images/hitenCV.pdf" target="_blank" rel="noopener">Resume</a>
+                <button class="icon-btn menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
+                </button>
+            </div>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h1>Hi, I'm <span>Hiten Patel</span></h1>
-                    <h2>Software Developer</h2>
-                    <p>Enthusiastic computer science student with a strong foundation in programming and software development.</p>
-                    <div class="hero-btns">
-                        <a href="#contact" class="btn primary-btn">Contact Me</a>
-                        <a href="#resume" class="btn secondary-btn">View Resume</a>
+    <main id="main">
+        <!-- Hero: the intro transcribes itself like a live caption -->
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="wrap hero-grid">
+                <div class="hero-copy">
+                    <div class="speaker">
+                        <span class="speaker-dot" aria-hidden="true"></span>
+                        <span class="speaker-name" aria-hidden="true">Hiten Patel</span>
+                        <span class="speaker-status" data-status aria-hidden="true">speaking</span>
+                        <span class="speaker-time" data-timer aria-hidden="true">0:00</span>
+                        <button class="replay" type="button" data-replay>Replay intro</button>
                     </div>
-                    <div class="social-icons">
-                        <a href="https://github.com/hitten04" target="_blank"><i class="fab fa-github"></i></a>
-                        <a href="https://www.linkedin.com/in/hitenpatel2004" target="_blank"><i class="fab fa-linkedin"></i></a>
-                        <a href="mailto:hp040912@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
-                    </div>
-                </div>
-                <div class="hero-image">
-                    <div class="image-container">
-                        <!-- Profile image -->
-                        <img src="images/045.jpg" alt="Hiten Patel" class="profile-image">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <div class="section-header">
-                <h2>About Me</h2>
-                <div class="underline"></div>
+                    <h1 class="transcript" id="hero-title" data-transcript>Hi, I'm Hiten. I build custom software, AI agents and the integrations that put AI to work.</h1>
+                </div>
+
+                <figure class="hero-portrait">
+                    <img src="images/web/hiten-portrait.webp" width="900" height="933" alt="Hiten Patel in a navy suit, smiling" fetchpriority="high">
+                    <figcaption>Available for custom software and AI projects</figcaption>
+                </figure>
             </div>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>I am Hiten Patel, a dedicated computer science student with a solid foundation in programming and devlopment</p>
-                    <p>I have a passion for building efficient and scalable solutions, constantly exploring new technologies to enhance my skills. I thrive on tackling challenging projects that push me to grow as a developer and problem solver.</p>
-                    <div class="about-details">
-                        <div class="detail">
-                            <i class="fas fa-user"></i>
-                            <div>
-                                <h4>Name</h4>
-                                <p>Hiten Patel</p>
-                            </div>
-                        </div>
-                        <div class="detail">
-                            <i class="fas fa-envelope"></i>
-                            <div>
-                                <h4>Email</h4>
-                                <p>hp040912@gmail.com</p>
-                            </div>
-                        </div>
-                        <div class="detail">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <div>
-                                <h4>Location</h4>
-                                <p>Ahmedabad, Gujarat</p>
-                            </div>
-                        </div>
-                        <div class="detail">
-                            <i class="fas fa-phone"></i>
-                            <div>
-                                <h4>Phone</h4>
-                                <p>9558883186</p>
-                            </div>
-                        </div>
-                    </div>                    
+
+            <div class="wave-wrap">
+                <canvas class="wave" data-wave aria-hidden="true" title="Move your cursor over the waveform"></canvas>
+            </div>
+
+            <div class="wrap hero-foot">
+                <p class="hero-sub">Junior Python and AI developer at Enterprise Analytic in Ahmedabad, and a 2026 computer science graduate. I work on FastAPI backends, voice and chat agents, and machine learning that ships as a real product.</p>
+                <div class="hero-actions">
+                    <a class="btn btn-primary" href="#work">See my work</a>
+                    <a class="btn" href="mailto:hp040912@gmail.com">Email me</a>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Resume Section -->
-    <section id="resume" class="resume">
-        <div class="container">
-            <div class="section-header">
-                <h2>My Resume</h2>
-                <div class="underline"></div>
-            </div>
-            <div class="resume-content">
-                <div class="resume-download">
-                    <p>Here's a summary of my projects, education, and skills.</p>
-                    <a href="images/hitenCV.pdf#view=FitH" class="btn primary-btn" target="_blank" rel="noopener"><i class="fas fa-download"></i> View Resume</a>
+        <!-- Work -->
+        <section class="section work" id="work" aria-labelledby="work-title">
+            <div class="wrap">
+                <div class="section-head">
+                    <h2 id="work-title">Selected work</h2>
+                    <p>Five projects, from a production voice-booking platform to a webcam game you play with your finger.</p>
                 </div>
-                
-                <div class="resume-sections">
-                    <!-- Education Section -->
-                    <div class="resume-section">
-                        <h3><i class="fas fa-graduation-cap"></i> Education</h3>
 
-                        <div class="resume-item">
-                            <div class="resume-item-header">
-                                <h4>Lok Jagruti University</h4>
-                                <div class="resume-item-meta">
-                                    <span class="company">B.E in CSE (Computer Science Engineering), CGPA: 8.27</span>
-                                    <span class="duration">2022 - Present · Ahmedabad, Gujarat</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="resume-item">
-                            <div class="resume-item-header">
-                                <h4>Class 12th — Sankalp International School</h4>
-                                <div class="resume-item-meta">
-                                    <span class="company">Percentage: 72%</span>
-                                    <span class="duration">2021 - 2022 · Ahmedabad, Gujarat</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="resume-item">
-                            <div class="resume-item-header">
-                                <h4>Class 10th — Sarvoday Vidhyamandir</h4>
-                                <div class="resume-item-meta">
-                                    <span class="company">Percentage: 86.5%</span>
-                                    <span class="duration">2019 - 2020 · Ahmedabad, Gujarat</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="skills">
-        <div class="container">
-            <div class="section-header">
-                <h2>My Skills</h2>
-                <div class="underline"></div>
-            </div>
-            <div class="skills-content">
-                <div class="skill-category">
-                    <h3>Programming Languages</h3>
-                    <div class="skills-grid">
-                        <div class="skill-item">
-                            <div class="skill-icon"><i class="fab fa-python"></i></div>
-                            <h4>Python</h4>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon"><i class="fas fa-database"></i></div>
-                            <h4>SQL</h4>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon"><i class="fab fa-java"></i></div>
-                            <h4>Java</h4>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon"><i class="fab fa-html5"></i></div>
-                            <h4>HTML</h4>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon"><i class="fab fa-css3-alt"></i></div>
-                            <h4>CSS</h4>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon"><i class="fab fa-js"></i></div>
-                            <h4>JavaScript</h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3>Frameworks & Libraries</h3>
-                    <div class="skills-grid">
-                        <div class="skill-item">
-                            <div class="skill-icon"><i class="fab fa-python"></i></div>
-                            <h4>Django</h4>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon"><i class="fab fa-python"></i></div>
-                            <h4>FastAPI</h4>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon"><i class="fas fa-chart-line"></i></div>
-                            <h4>Pandas</h4>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon"><i class="fas fa-brain"></i></div>
-                            <h4>NumPy</h4>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon"><i class="fas fa-chart-bar"></i></div>
-                            <h4>Matplotlib</h4>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon"><i class="fas fa-cube"></i></div>
-                            <h4>Power BI</h4>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon"><i class="fas fa-layer-group"></i></div>
-                            <h4>Streamlit</h4>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon"><i class="fab fa-react"></i></div>
-                            <h4>React JS</h4>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon"><i class="fab fa-bootstrap"></i></div>
-                            <h4>Bootstrap</h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3>Tools & Platforms</h3>
-                    <div class="skills-grid">
-                        <div class="skill-item">
-                            <div class="skill-icon"><i class="fas fa-database"></i></div>
-                            <h4>PostgreSQL</h4>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon"><i class="fas fa-database"></i></div>
-                            <h4>MySQL</h4>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon"><i class="fab fa-github"></i></div>
-                            <h4>GitHub</h4>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon"><i class="fas fa-code"></i></div>
-                            <h4>VS Code</h4>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon"><i class="fas fa-book"></i></div>
-                            <h4>Jupyter Notebook</h4>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon"><i class="fas fa-robot"></i></div>
-                            <h4>N8N Agents</h4>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <div class="container">
-            <div class="section-header">
-                <h2>My Projects</h2>
-                <div class="underline"></div>
-            </div>
-                            <div class="projects-grid">
-                    <div class="project-card">
-                        <div class="project-image"><img src="images/bizfusion.png" alt="Bizfusion.ai"></div>
-                        <div class="project-info">
-                            <h3>Bizfusion.ai</h3>
-                            <p>Scalable FastAPI backend for a multi-tenant booking platform with a secure admin panel. Real-time AI voice/chat via Twilio, OpenAI, and Azure; async event-driven architecture with WebSockets and asyncio.</p>
-                            <div class="project-footer">
-                                <div class="project-tech">
-                                    <span>Python</span>
-                                    <span>FastAPI</span>
-                                    <span>WebSockets</span>
-                                    <span>Twilio</span>
-                                    <span>OpenAI</span>
-                                    <span>Azure</span>
-                                </div>
+                <div class="work-layout">
+                    <ol class="project-list" data-projects>
+                        <li class="project is-active" data-image="images/web/bizfusion.webp">
+                            <img class="project-shot" src="images/web/bizfusion.webp" width="1400" height="665" alt="Bizfusion.ai landing page" loading="lazy">
+                            <div class="project-body">
+                                <h3 class="project-title">Bizfusion.ai</h3>
+                                <p>A booking platform where businesses get an AI receptionist on the phone and in chat. I built multi-tenant FastAPI services, the secure admin panel and real-time voice flows with Twilio, OpenAI and Azure, all async with WebSockets.</p>
+                                <p class="project-stack">Python, FastAPI, WebSockets, asyncio, Twilio, OpenAI, Azure</p>
                                 <div class="project-links">
-                                    <a href="https://bizfusion.ai/" class="btn small-btn live-btn" target="_blank" rel="noopener">Live</a>
+                                    <a href="https://bizfusion.ai/" target="_blank" rel="noopener">Visit site<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11 11 5M6 5h5v5"/></svg></a>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <div class="project-image"><img src="images/agrinova.png" alt="AgriNova"></div>
-                        <div class="project-info">
-                            <h3>AgriNova - Smart Crop Recommendation System</h3>
-                            <p>AI-powered agricultural recommendation system that analyzes 10+ environmental parameters to predict optimal crops. Built Random Forest-based system achieving 90%+ accuracy with feature engineering and probability-based ranking for top 6 crop predictions.</p>
-                            <div class="project-footer">
-                                <div class="project-tech">
-                                    <span>Python</span>
-                                    <span>FastAPI</span>
-                                    <span>React</span>
-                                    <span>scikit-learn</span>
-                                    <span>pandas</span>
-                                    <span>NumPy</span>
-                                    <span>Random Forest ML</span>
-                                </div>
+                        </li>
+                        <li class="project" data-image="images/web/agrinova.webp">
+                            <img class="project-shot" src="images/web/agrinova.webp" width="1400" height="689" alt="AgriNova home page with a green crop field" loading="lazy">
+                            <div class="project-body">
+                                <h3 class="project-title">AgriNova</h3>
+                                <p>Tells a farmer which crops suit their land. A Random Forest model reads more than ten soil and weather readings and ranks the six best crops, with over 90% accuracy.</p>
+                                <p class="project-stack">Python, FastAPI, React, scikit-learn, pandas, NumPy</p>
                                 <div class="project-links">
-                                    <a href="https://agrinova.me/" class="btn small-btn live-btn" target="_blank" rel="noopener">Live</a>
+                                    <a href="https://agrinova.me/" target="_blank" rel="noopener">Visit site<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11 11 5M6 5h5v5"/></svg></a>
+                                    <a href="https://github.com/hitten04/AgriNova" target="_blank" rel="noopener">View code<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11 11 5M6 5h5v5"/></svg></a>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <div class="project-image"><img src="images/intellidocs.png" alt="Bizfusion.ai"></div>
-                        <div class="project-info">
-                            <h3>IntelliDocs</h3>
-                            <p>AI document Q&A app in Streamlit. Users upload PDF/DOCX/TXT and get answers via Groq LLMs; document processing and vector storage with ChromaDB.</p>
-                            <div class="project-footer">
-                                <div class="project-tech">
-                                    <span>Python</span>
-                                    <span>Streamlit</span>
-                                    <span>LLMs</span>
-                                    <span>ChromaDB</span>
-                                </div>
+                        </li>
+                        <li class="project" data-image="images/web/intellidocs.webp">
+                            <img class="project-shot" src="images/web/intellidocs.webp" width="1400" height="662" alt="IntelliDocs app with a document upload sidebar" loading="lazy">
+                            <div class="project-body">
+                                <h3 class="project-title">IntelliDocs</h3>
+                                <p>Upload a PDF, Word file or text file and ask it questions. Documents are split and stored in ChromaDB, and Groq-hosted language models write the answers.</p>
+                                <p class="project-stack">Python, Streamlit, Groq LLMs, ChromaDB</p>
                                 <div class="project-links">
-                                    <a href="https://intellidocs1.streamlit.app/" class="btn small-btn live-btn" target="_blank" rel="noopener">Live</a>
+                                    <a href="https://intellidocs1.streamlit.app/" target="_blank" rel="noopener">Try it<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11 11 5M6 5h5v5"/></svg></a>
+                                    <a href="https://github.com/hitten04/IntelliDocs" target="_blank" rel="noopener">View code<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11 11 5M6 5h5v5"/></svg></a>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <div class="project-image"><img src="images/virtualaudioguide.png" alt="Virtual Audio Guide"></div>
-                        <div class="project-info">
-                            <h3>Virtual Audio Guide</h3>
-                            <p>Full-stack audio guide platform with Django backend and React frontend. Features RESTful APIs for managing audio content, user data, and multimedia metadata with PostgreSQL database and Django ORM for efficient data handling.</p>
-                            <div class="project-footer">
-                                <div class="project-tech">
-                                    <span>Python</span>
-                                    <span>Django</span>
-                                    <span>React</span>
-                                    <span>Django REST Framework</span>
-                                    <span>Bootstrap</span>
-                                    <span>PostgreSQL</span>
-                                </div>
+                        </li>
+                        <li class="project" data-image="images/web/virtualaudioguide.webp">
+                            <img class="project-shot" src="images/web/virtualaudioguide.webp" width="1400" height="687" alt="Virtual Audio Guide home page, Discover the World Through Sound" loading="lazy">
+                            <div class="project-body">
+                                <h3 class="project-title">Virtual Audio Guide</h3>
+                                <p>Audio tours for places you visit. I built the Django REST APIs for guides, users and media, and designed the PostgreSQL schema behind the React front end.</p>
+                                <p class="project-stack">Python, Django REST Framework, React, PostgreSQL, Bootstrap</p>
                                 <div class="project-links">
-                                    <a href="https://github.com/hitten04/VirtualAudioGuide" class="btn small-btn github-btn" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
+                                    <a href="https://github.com/hitten04/VirtualAudioGuide" target="_blank" rel="noopener">View code<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11 11 5M6 5h5v5"/></svg></a>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <div class="project-image"><img src="images/visiontap.png" alt="VisionTap Circles Game"></div>
-                        <div class="project-info">
-                            <h3>VisionTap Circles Game</h3>
-                            <p>Interactive computer vision game using real-time webcam-based vision for dynamic target rendering and tap detection. Features circle detection, hit validation with position/radius thresholds, and scoring system with increasing difficulty levels.</p>
-                            <div class="project-footer">
-                                <div class="project-tech">
-                                    <span>Python</span>
-                                    <span>OpenCV</span>
-                                    <span>NumPy</span>
-                                    <span>MediaPipe</span>
-                                    <span>Tkinter</span>
-                                    <span>Computer Vision</span>
-                                </div>
+                        </li>
+                        <li class="project" data-image="images/web/visiontap-cover.webp">
+                            <img class="project-shot" src="images/web/visiontap-cover.webp" width="1400" height="788" alt="VisionTap cover: Hiten raising his hand with tracking points drawn on it, next to a screenshot of the game and the OpenCV, Python and MediaPipe logos" loading="lazy">
+                            <div class="project-body">
+                                <h3 class="project-title">VisionTap</h3>
+                                <p>A webcam game: circles appear on screen and you tap them with your finger in the air. MediaPipe tracks the hand, and hits are checked against each circle's position and radius as levels speed up.</p>
+                                <p class="project-stack">Python, OpenCV, MediaPipe, NumPy, Tkinter</p>
                                 <div class="project-links">
-                                    <a href="#" class="btn small-btn github-btn" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
+                                    <a href="https://github.com/hitten04/VisionTap-Circles-game-using-Opencv" target="_blank" rel="noopener">View code<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11 11 5M6 5h5v5"/></svg></a>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
-        </div>
-    </section>
+                        </li>
+                    </ol>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <div class="section-header">
-                <h2>Contact Me</h2>
-                <div class="underline"></div>
-            </div>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <h3>Get In Touch</h3>
-                    <p>I'm currently seeking internship opportunities to apply my academic knowledge to real-world challenges. Feel free to reach out if you have any opportunities or questions.</p>
-                    <div class="contact-details">
-                        <div class="contact-item">
-                            <i class="fas fa-envelope"></i>
-                            <div>
-                                <h4>Email</h4>
-                                <p>hp040912@gmail.com</p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-phone"></i>
-                            <div>
-                                <h4>Phone</h4>
-                                <p>9558883186</p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <div>
-                                <h4>Location</h4>
-                                <p>Ahmedabad, Gujarat</p>
-                            </div>
+                    <div class="project-preview" aria-hidden="true">
+                        <div class="preview-frame" data-preview>
+                            <img src="images/web/bizfusion.webp" alt="" class="is-shown">
                         </div>
                     </div>
-                    <div class="social-icons">
-                        <a href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a>
-                        <a href="https://www.linkedin.com/in/hitenpatel2004" target="_blank"><i class="fab fa-linkedin"></i></a>
-                        <a href="mailto:hp040912@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
-                    </div>
                 </div>
-                <div class="contact-form">
-                    <form id="contactForm" action="https://formspree.io/f/moveqwob" method="POST">
-                        <div class="form-group">
-                            <input type="text" id="name" name="name" placeholder="Your Name" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" id="email" name="email" placeholder="Your Email" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" id="subject" name="subject" placeholder="Subject" required>
-                        </div>
-                        <div class="form-group">
-                            <textarea id="message" name="message" placeholder="Your Message" required></textarea>
-                        </div>
-                        <input type="hidden" name="_next" value="thanks.html">
-                        <button type="submit" class="btn primary-btn">Send Message</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <p>&copy; 2024 Hiten Patel. All Rights Reserved.</p>
-                <div class="footer-links">
-                    <a href="#home">Home</a>
-                    <a href="#about">About</a>
-                    <a href="#resume">Resume</a>
-                    <a href="#skills">Skills</a>
-                    <a href="#projects">Projects</a>
-                    <a href="#contact">Contact</a>
+                <p class="more-work">More experiments live on <a href="https://github.com/hitten04" target="_blank" rel="noopener">GitHub</a>.</p>
+            </div>
+        </section>
+
+        <!-- Experience -->
+        <section class="section experience" id="experience" aria-labelledby="experience-title">
+            <div class="wrap exp-grid">
+                <h2 id="experience-title">Experience</h2>
+                <article class="job">
+                    <header class="job-head">
+                        <h3>Enterprise Analytic</h3>
+                    </header>
+                    <ol class="roles">
+                        <li class="role is-current">
+                            <div class="role-head">
+                                <h4>Junior Python and AI Developer</h4>
+                                <span class="role-when">Now</span>
+                            </div>
+                            <p>My current full-time role, carrying on the Python backend and AI integration work I started here as an intern.</p>
+                        </li>
+                        <li class="role">
+                            <div class="role-head">
+                                <h4>Python and AI Intern</h4>
+                                <span class="role-when">During my degree</span>
+                            </div>
+                            <ul class="job-points">
+                                <li>Built backend features for an AI booking system with FastAPI, SQLAlchemy and PostgreSQL.</li>
+                                <li>Implemented scheduling, rescheduling and cancellation for healthcare and general service businesses.</li>
+                                <li>Worked on voice and chat conversations using Twilio and AI services, and helped senior developers connect ElevenLabs speech to Twilio calls.</li>
+                                <li>Wrote system prompts for the GPT models and helped build the admin panel.</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </article>
+            </div>
+        </section>
+
+        <!-- Skills -->
+        <section class="section skills" id="skills" aria-labelledby="skills-title">
+            <div class="wrap">
+                <div class="section-head">
+                    <h2 id="skills-title">What I work with</h2>
+                </div>
+                <div class="skill-groups">
+                    <div class="skill-group">
+                        <h3>Languages</h3>
+                        <ul><li>Python</li><li>SQL</li><li>Java</li><li>JavaScript</li><li>HTML</li><li>CSS</li></ul>
+                    </div>
+                    <div class="skill-group">
+                        <h3>Frameworks and libraries</h3>
+                        <ul><li>FastAPI</li><li>Django</li><li>React</li><li>Streamlit</li><li>pandas</li><li>NumPy</li><li>Matplotlib</li><li>Bootstrap</li></ul>
+                    </div>
+                    <div class="skill-group">
+                        <h3>Tools and platforms</h3>
+                        <ul><li>PostgreSQL</li><li>MySQL</li><li>Git and GitHub</li><li>Power BI</li><li>n8n agents</li><li>Jupyter</li><li>VS Code</li><li>Cursor</li></ul>
+                    </div>
+                    <div class="skill-group">
+                        <h3>Foundations</h3>
+                        <ul><li>Data structures and algorithms</li><li>Object-oriented programming</li><li>Database systems</li><li>Operating systems</li></ul>
+                    </div>
                 </div>
             </div>
+        </section>
+
+        <!-- About -->
+        <section class="section about" id="about" aria-labelledby="about-title">
+            <div class="wrap about-grid">
+                <figure class="about-photo">
+                    <img src="images/web/hiten-mountains.webp" width="1100" height="1100" alt="Hiten in a cap and scarf, looking out over misty mountains" loading="lazy">
+                </figure>
+                <div class="about-copy">
+                    <h2 id="about-title">About me</h2>
+                    <p class="lead">I like problems where software has to deal with the messy real world: a caller who changes their mind halfway through a booking, a hand that's half out of frame, soil data with gaps in it.</p>
+                    <p>I completed my B.E. in Computer Science Engineering at Lok Jagruti University in July 2026 with a CGPA of 7.81, and now work as a junior Python and AI developer at Enterprise Analytic. Most of my time goes into Python backends and AI integrations, and I learn fastest by shipping something people can actually use. At Hackovate LJ 2025 my team placed in the top 50 of 245.</p>
+
+                    <div class="facts">
+                        <div class="fact-block">
+                            <h3>Education</h3>
+                            <ol class="timeline">
+                                <li><span class="tl-year">2022 to 2026</span><span class="tl-what">B.E. Computer Science Engineering, Lok Jagruti University. CGPA 7.81</span></li>
+                                <li><span class="tl-year">2021 to 2022</span><span class="tl-what">Class 12, Sankalp International School. 72%</span></li>
+                                <li><span class="tl-year">2019 to 2020</span><span class="tl-what">Class 10, Sarvoday Vidhyamandir. 86.5%</span></li>
+                            </ol>
+                        </div>
+                        <div class="fact-block">
+                            <h3>Certificates</h3>
+                            <ul class="certs">
+                                <li>Oracle Cloud Infrastructure 2024 Generative AI Professional <span>Oracle</span></li>
+                                <li>Building Generative AI-Powered Applications with Python <span>IBM on Coursera</span></li>
+                                <li>AWS Cloud Technical Essentials <span>AWS on Coursera</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section class="section contact" id="contact" aria-labelledby="contact-title">
+            <div class="wrap contact-grid">
+                <div class="contact-copy">
+                    <h2 id="contact-title">Have a project in mind?</h2>
+                    <p>Email is the quickest way to reach me. You can also use the form.</p>
+                    <a class="contact-email" href="mailto:hp040912@gmail.com">hp040912@gmail.com</a>
+                    <ul class="contact-list">
+                        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h3l2 5-2.5 1.5a11 11 0 0 0 7 7L16 14l5 2v3a2 2 0 0 1-2 2A17 17 0 0 1 3 5a2 2 0 0 1 2-2"/></svg><a href="tel:+919558883186">+91 95588 83186</a></li>
+                        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9h3.5v11H4zM5.75 3.5a2 2 0 1 1 0 4 2 2 0 0 1 0-4zM10 9h3.3v1.6c.5-.9 1.7-1.9 3.6-1.9 3.6 0 4.1 2.3 4.1 5.3V20h-3.5v-5.3c0-1.3 0-2.9-1.8-2.9s-2.1 1.4-2.1 2.8V20H10z" class="fill"/></svg><a href="https://www.linkedin.com/in/hitenpatel2004" target="_blank" rel="noopener">LinkedIn</a></li>
+                        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path class="fill" d="M12 2a10 10 0 0 0-3.2 19.5c.5.1.7-.2.7-.5v-1.7c-2.8.6-3.4-1.3-3.4-1.3-.4-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.3 1.1 2.9.8.1-.6.3-1.1.6-1.3-2.2-.3-4.6-1.1-4.6-5 0-1.1.4-2 1-2.7-.1-.3-.4-1.3.1-2.7 0 0 .8-.3 2.8 1a9.6 9.6 0 0 1 5 0c1.9-1.3 2.8-1 2.8-1 .5 1.4.2 2.4.1 2.7.6.7 1 1.6 1 2.7 0 3.9-2.3 4.7-4.6 5 .4.3.7.9.7 1.9V21c0 .3.2.6.7.5A10 10 0 0 0 12 2"/></svg><a href="https://github.com/hitten04" target="_blank" rel="noopener">GitHub</a></li>
+                        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.1-7-11.5a7 7 0 0 1 14 0C19 14.9 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>Ahmedabad, Gujarat</span></li>
+                    </ul>
+                </div>
+
+                <form class="contact-form" id="contactForm" action="https://formspree.io/f/moveqwob" method="POST" novalidate>
+                    <div class="field">
+                        <label for="name">Your name</label>
+                        <input type="text" id="name" name="name" autocomplete="name" required>
+                        <p class="field-error" id="name-error" hidden>Enter your name so I know who to reply to.</p>
+                    </div>
+                    <div class="field">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" autocomplete="email" required>
+                        <p class="field-error" id="email-error" hidden>Enter an email address like name@example.com.</p>
+                    </div>
+                    <div class="field">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" required>
+                        <p class="field-error" id="subject-error" hidden>Add a short subject.</p>
+                    </div>
+                    <div class="field">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                        <p class="field-error" id="message-error" hidden>Write a message before sending.</p>
+                    </div>
+                    <input type="hidden" name="_next" value="thanks.html">
+                    <button type="submit" class="btn btn-primary">Send message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap footer-inner">
+            <p>&copy; <span data-year>2026</span> Hiten Patel</p>
+            <a href="#top">Back to top</a>
         </div>
     </footer>
 
     <script src="js/script.js"></script>
 </body>
-</html> 
+</html>

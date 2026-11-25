@@ -3,240 +3,174 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Dashboard | Hiten Patel</title>
+    <meta name="robots" content="noindex">
+    <title>Messages | Hiten Patel</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%232638F0'/%3E%3Cg fill='%23fff'%3E%3Crect x='6' y='13' width='3' height='6' rx='1.5'/%3E%3Crect x='11' y='8' width='3' height='16' rx='1.5'/%3E%3Crect x='16' y='11' width='3' height='10' rx='1.5'/%3E%3Crect x='21' y='6' width='3' height='20' rx='1.5'/%3E%3C/g%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:wght@400;600;700&family=Familjen+Grotesk:wght@400..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        try { var t = localStorage.getItem('theme'); if (t) document.documentElement.setAttribute('data-theme', t); } catch (e) {}
+    </script>
     <style>
-        .admin-container {
-            max-width: 1200px;
-            margin: 100px auto;
-            padding: 20px;
-        }
-        
-        .admin-header {
+        .admin { padding-block: 3rem 5rem; }
+        .admin-head {
             display: flex;
+            flex-wrap: wrap;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 30px;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
         }
-        
-        .admin-title {
-            font-size: 2rem;
-            color: var(--dark-color);
+        .admin-head h1 { font-size: var(--step-3); }
+        .admin-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 2rem; }
+        .admin-note { color: var(--slate); font-size: var(--step--1); margin-bottom: 2rem; max-width: 62ch; }
+
+        .message {
+            padding: 1.25rem 0;
+            border-top: 1px solid var(--line);
         }
-        
-        .message-card {
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: var(--box-shadow);
-            padding: 20px;
-            margin-bottom: 20px;
+        .message:last-child { border-bottom: 1px solid var(--line); }
+        .message-top { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.5rem 1rem; }
+        .message-from { font-weight: 700; }
+        .message-date { color: var(--slate); font-size: var(--step--1); }
+        .message-subject { margin-top: 0.4rem; font-family: var(--font-display); font-size: var(--step-1); font-weight: 600; }
+        .message-body { margin-top: 0.4rem; max-width: 70ch; white-space: pre-wrap; }
+        .message-email { margin-top: 0.5rem; }
+        .message-email a { color: var(--ultra); }
+        .empty { padding: 3rem 0; color: var(--slate); border-block: 1px solid var(--line); }
+
+        .login {
+            min-height: 100vh;
+            display: grid;
+            place-items: center;
+            padding: 2rem var(--gutter);
         }
-        
-        .message-header {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 15px;
-            border-bottom: 1px solid #e2e8f0;
-            padding-bottom: 10px;
-        }
-        
-        .message-sender {
-            font-weight: 600;
-            color: var(--dark-color);
-        }
-        
-        .message-date {
-            color: var(--gray-color);
-            font-size: 0.9rem;
-        }
-        
-        .message-subject {
-            font-weight: 600;
-            margin-bottom: 10px;
-            color: var(--primary-color);
-        }
-        
-        .message-content {
-            margin-bottom: 15px;
-            color: var(--dark-color);
-        }
-        
-        .message-email {
-            color: var(--gray-color);
-            font-size: 0.9rem;
-        }
-        
-        .no-messages {
-            text-align: center;
-            padding: 50px;
-            color: var(--gray-color);
-            font-size: 1.2rem;
-        }
-        
-        .admin-actions {
-            display: flex;
-            gap: 10px;
-            margin-bottom: 20px;
-        }
-        
-        .password-modal {
-            position: fixed;
-            top: 0;
-            left: 0;
+        .login-card {
             width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 1000;
+            max-width: 380px;
+            display: grid;
+            gap: 1rem;
+            padding: 2rem;
+            background: var(--paper);
+            border: 1px solid var(--line);
+            border-radius: 12px;
         }
-        
-        .password-form {
-            background-color: white;
-            padding: 30px;
-            border-radius: 10px;
-            width: 100%;
-            max-width: 400px;
-        }
-        
-        .password-form h2 {
-            margin-bottom: 20px;
-            color: var(--dark-color);
-        }
+        .login-card h1 { font-size: var(--step-2); }
+        .login-card .btn { justify-self: start; }
     </style>
 </head>
 <body>
-    <!-- Password Modal -->
-    <div class="password-modal" id="passwordModal">
-        <div class="password-form">
-            <h2>Admin Login</h2>
-            <div class="form-group">
-                <input type="password" id="adminPassword" placeholder="Enter Password" required>
+    <div class="login" id="passwordModal">
+        <form class="login-card" id="loginForm" novalidate>
+            <h1>Sign in to messages</h1>
+            <div class="field" id="pwField">
+                <label for="adminPassword">Password</label>
+                <input type="password" id="adminPassword" autocomplete="current-password" required>
+                <p class="field-error" id="pwError" hidden>That password isn't right. Try again.</p>
             </div>
-            <button id="loginBtn" class="btn primary-btn">Login</button>
-        </div>
+            <button type="submit" class="btn btn-primary">Sign in</button>
+        </form>
     </div>
 
-    <div class="admin-container" id="adminContent" style="display: none;">
-        <div class="admin-header">
-            <h1 class="admin-title">Message Dashboard</h1>
-            <a href="index.html" class="btn secondary-btn">Back to Website</a>
+    <main class="wrap admin" id="adminContent" hidden>
+        <div class="admin-head">
+            <h1>Messages</h1>
+            <a href="index.html" class="btn">Back to the portfolio</a>
         </div>
-        
+        <p class="admin-note">These are copies saved in this browser when the contact form is sent from it. Every message also goes to your inbox through Formspree.</p>
         <div class="admin-actions">
-            <button id="clearMessages" class="btn secondary-btn">Clear All Messages</button>
-            <button id="addTestMessage" class="btn primary-btn">Add Test Message</button>
+            <button id="addTestMessage" class="btn btn-small" type="button">Add a test message</button>
+            <button id="clearMessages" class="btn btn-small" type="button">Delete all messages</button>
         </div>
-        
-        <div id="messagesContainer">
-            <!-- Messages will be displayed here -->
-            <div class="no-messages" id="noMessages">
-                <i class="fas fa-inbox fa-3x"></i>
-                <p>No messages yet.</p>
-            </div>
-        </div>
-    </div>
+        <div id="messagesContainer"></div>
+    </main>
 
     <script>
-        // Simple password protection
         const passwordModal = document.getElementById('passwordModal');
         const adminContent = document.getElementById('adminContent');
-        const loginBtn = document.getElementById('loginBtn');
         const adminPassword = document.getElementById('adminPassword');
-        
-        // Set a simple password (in a real app, this would be handled securely on a server)
+        const pwField = document.getElementById('pwField');
+        const pwError = document.getElementById('pwError');
+
+        // Simple client-side gate only: anyone can read this password in the page source.
         const correctPassword = 'admin123';
-        
-        loginBtn.addEventListener('click', function() {
+
+        document.getElementById('loginForm').addEventListener('submit', (e) => {
+            e.preventDefault();
             if (adminPassword.value === correctPassword) {
+                passwordModal.hidden = true;
                 passwordModal.style.display = 'none';
-                adminContent.style.display = 'block';
+                adminContent.hidden = false;
                 loadMessages();
             } else {
-                alert('Incorrect password. Please try again.');
-                adminPassword.value = '';
+                pwField.classList.add('has-error');
+                pwError.hidden = false;
+                adminPassword.setAttribute('aria-invalid', 'true');
+                adminPassword.setAttribute('aria-describedby', 'pwError');
+                adminPassword.select();
             }
         });
-        
-        // Allow Enter key to submit password
-        adminPassword.addEventListener('keyup', function(e) {
-            if (e.key === 'Enter') {
-                loginBtn.click();
-            }
+        adminPassword.addEventListener('input', () => {
+            pwField.classList.remove('has-error');
+            pwError.hidden = true;
+            adminPassword.removeAttribute('aria-invalid');
         });
-        
-        // Load messages from local storage
+
+        const readMessages = () => {
+            try { return JSON.parse(localStorage.getItem('contactMessages')) || []; } catch (e) { return []; }
+        };
+
+        const el = (tag, cls, text) => {
+            const n = document.createElement(tag);
+            if (cls) n.className = cls;
+            if (text != null) n.textContent = text;
+            return n;
+        };
+
         function loadMessages() {
-            const messagesContainer = document.getElementById('messagesContainer');
-            const noMessages = document.getElementById('noMessages');
-            
-            // Get messages from local storage
-            let messages = JSON.parse(localStorage.getItem('contactMessages')) || [];
-            
+            const box = document.getElementById('messagesContainer');
+            box.textContent = '';
+            const messages = readMessages().sort((a, b) => new Date(b.date) - new Date(a.date));
+
             if (messages.length === 0) {
-                noMessages.style.display = 'block';
+                box.appendChild(el('p', 'empty', 'No messages saved in this browser yet. New ones appear here after someone sends the contact form.'));
                 return;
             }
-            
-            noMessages.style.display = 'none';
-            
-            // Sort messages by date (newest first)
-            messages.sort((a, b) => new Date(b.date) - new Date(a.date));
-            
-            // Clear previous messages
-            messagesContainer.innerHTML = '';
-            
-            // Add each message to the container
-            messages.forEach(message => {
-                const messageCard = document.createElement('div');
-                messageCard.className = 'message-card';
-                
-                const date = new Date(message.date).toLocaleString();
-                
-                messageCard.innerHTML = `
-                    <div class="message-header">
-                        <div class="message-sender">${message.name}</div>
-                        <div class="message-date">${date}</div>
-                    </div>
-                    <div class="message-subject">${message.subject}</div>
-                    <div class="message-content">${message.message}</div>
-                    <div class="message-email">
-                        <i class="fas fa-envelope"></i> ${message.email}
-                    </div>
-                `;
-                
-                messagesContainer.appendChild(messageCard);
+
+            messages.forEach(m => {
+                const card = el('article', 'message');
+                const top = el('div', 'message-top');
+                top.append(el('span', 'message-from', m.name), el('span', 'message-date', new Date(m.date).toLocaleString()));
+                const email = el('p', 'message-email');
+                const a = el('a', null, m.email);
+                a.href = 'mailto:' + m.email;
+                email.appendChild(a);
+                card.append(top, el('p', 'message-subject', m.subject), el('p', 'message-body', m.message), email);
+                box.appendChild(card);
             });
         }
-        
-        // Clear all messages
-        document.getElementById('clearMessages').addEventListener('click', function() {
-            if (confirm('Are you sure you want to delete all messages?')) {
-                localStorage.removeItem('contactMessages');
+
+        document.getElementById('clearMessages').addEventListener('click', () => {
+            if (confirm('Delete all saved messages from this browser? This cannot be undone.')) {
+                try { localStorage.removeItem('contactMessages'); } catch (e) {}
                 loadMessages();
             }
         });
-        
-        // Add a test message (for demonstration)
-        document.getElementById('addTestMessage').addEventListener('click', function() {
-            let messages = JSON.parse(localStorage.getItem('contactMessages')) || [];
-            
-            const testMessage = {
+
+        document.getElementById('addTestMessage').addEventListener('click', () => {
+            const messages = readMessages();
+            messages.push({
                 name: 'Test User',
                 email: 'test@example.com',
-                subject: 'Test Message',
-                message: 'This is a test message to demonstrate how the message dashboard works.',
+                subject: 'Test message',
+                message: 'This is a test message to show how the message list works.',
                 date: new Date().toISOString()
-            };
-            
-            messages.push(testMessage);
-            localStorage.setItem('contactMessages', JSON.stringify(messages));
-            
+            });
+            try { localStorage.setItem('contactMessages', JSON.stringify(messages)); } catch (e) {}
             loadMessages();
         });
     </script>
 </body>
-</html> 
+</html>

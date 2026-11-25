@@ -1,70 +1,56 @@
 # Hiten Patel - Portfolio Website
 
-A modern, responsive portfolio website for Hiten Patel, a software developer. This website showcases skills, projects, and provides contact information.
+Personal portfolio of Hiten Patel, a Python and AI developer in Ahmedabad.
 
-## Features
+## Design
 
-- Responsive design that works on all devices
-- Modern UI with smooth animations
-- Interactive navigation
-- Skills showcase
-- Project portfolio
-- Contact form
-- Social media integration
+The site is built around a live-caption idea, because most of Hiten's work is software that listens and talks back:
 
-## Technologies Used
+- The intro transcribes itself word by word, like live captions, over a voice waveform.
+- The waveform reacts to your cursor (or finger on touch screens). "Replay intro" plays the caption again.
+- Hovering or tabbing through the project list swaps the screenshot in the preview panel.
+- Light and dark themes follow the system setting, with a toggle in the header.
+- With "reduce motion" turned on in the OS, the intro appears instantly and the waveform stays still.
 
-- HTML5
-- CSS3 (with CSS variables and flexbox/grid layouts)
-- JavaScript (vanilla)
-- Font Awesome for icons
-- Google Fonts
+Typefaces: Familjen Grotesk (headings) and Atkinson Hyperlegible Next (body), from Google Fonts.
 
-## Project Structure
+## Technologies
+
+- HTML5, CSS3 (custom properties, grid), vanilla JavaScript with no libraries
+- Canvas 2D for the waveform
+- Formspree for the contact form
+
+## Project structure
 
 ```
 portfolio/
-├── index.html          # Main HTML file
+├── index.html          # Main page
+├── thanks.html         # Shown after the contact form is sent
+├── admin.html          # Lists contact messages saved in this browser
 ├── css/
-│   └── style.css       # Stylesheet
+│   └── style.css       # All styles, theme tokens at the top
 ├── js/
-│   └── script.js       # JavaScript functionality
-└── README.md           # Project documentation
+│   └── script.js       # Caption intro, waveform, project preview, nav, form
+└── images/
+    ├── web/            # Compressed WebP images used by the site
+    └── hitenCV.pdf     # Resume
 ```
 
-## Setup and Usage
+## Setup
 
-1. Clone or download the repository
-2. Open `index.html` in your web browser
+No build step. Open `index.html` in a browser, or serve the folder with any static server:
 
-No build process or dependencies are required as this is a simple HTML/CSS/JS website.
+```
+python -m http.server
+```
 
-## Customization
+## Customizing
 
-To customize this portfolio for your own use:
-
-1. Update personal information in `index.html`
-2. Replace placeholder images with your own
-3. Update project details and links
-4. Modify colors in CSS variables (in `:root` selector in `style.css`)
-5. Update contact information
-
-## Browser Support
-
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
-- Opera (latest)
-
-## License
-
-This project is open source and available under the [MIT License](LICENSE).
+- Colours and type sizes: the `:root` block at the top of `css/style.css`
+- Intro sentence: the `<h1 data-transcript>` in `index.html`
+- Projects: each `<li class="project">` in `index.html`; set `data-image` to the screenshot for the preview panel
+- New images: add a WebP to `images/web/` (about 1400px wide for project screenshots)
 
 ## Contact
 
 Hiten Patel - [hp040912@gmail.com](mailto:hp040912@gmail.com)
-
----
-
-Created with ❤️ by Hiten Patel 
