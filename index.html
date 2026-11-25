@@ -81,6 +81,7 @@
                 <div class="hero-actions">
                     <a class="btn btn-primary" href="#work">See my work</a>
                     <a class="btn" href="mailto:hp040912@gmail.com">Email me</a>
+                    <button class="btn btn-ask" type="button" data-ask-open data-ask-listen><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="2.5" width="6" height="11.5" rx="3"/><path d="M5.5 11a6.5 6.5 0 0 0 13 0M12 17.5V21"/></svg>Ask by voice</button>
                 </div>
             </div>
         </section>
@@ -300,6 +301,42 @@
             </div>
         </section>
     </main>
+
+    <button class="ask-fab" type="button" data-ask-open data-ask-listen aria-label="Ask this site by voice" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="2.5" width="6" height="11.5" rx="3"/><path d="M5.5 11a6.5 6.5 0 0 0 13 0M12 17.5V21"/></svg><span>Ask this site</span></button>
+
+    <section class="ask" id="ask" role="dialog" aria-modal="false" aria-labelledby="ask-title" hidden>
+        <div class="wrap ask-inner">
+            <div class="ask-top">
+                <h2 class="ask-title" id="ask-title">Ask this site</h2>
+                <div class="ask-tools">
+                    <label class="ask-toggle"><input type="checkbox" id="ask-speak" checked> Read answers aloud</label>
+                    <button class="icon-btn" type="button" data-ask-close aria-label="Close Ask this site">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="ask-stage">
+                <canvas class="ask-wave" data-ask-wave aria-hidden="true"></canvas>
+                <div class="ask-dialogue">
+                    <p class="ask-you" data-ask-you></p>
+                    <p class="ask-answer is-prompt" data-ask-answer aria-hidden="true">Ask about Hiten's projects, skills, experience, or how to reach him.</p>
+                    <p class="sr-only" data-ask-live aria-live="polite"></p>
+                    <div class="ask-links" data-ask-links hidden></div>
+                </div>
+            </div>
+
+            <div class="ask-chips" data-ask-chips aria-label="Suggested questions"></div>
+
+            <form class="ask-form" data-ask-form>
+                <label class="sr-only" for="ask-input">Type a question</label>
+                <input id="ask-input" type="text" autocomplete="off" enterkeyhint="send" placeholder="For example: what does Hiten build?">
+                <button class="ask-mic" type="button" data-ask-mic aria-pressed="false" aria-label="Ask by voice"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="2.5" width="6" height="11.5" rx="3"/><path d="M5.5 11a6.5 6.5 0 0 0 13 0M12 17.5V21"/></svg></button>
+                <button class="btn btn-primary ask-send" type="submit">Ask</button>
+            </form>
+            <p class="ask-note" data-ask-note role="status"></p>
+        </div>
+    </section>
 
     <footer class="site-footer">
         <div class="wrap footer-inner">
